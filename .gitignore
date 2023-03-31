@@ -1,5 +1,6 @@
 # custom
 target/
+site/
 
 # Compiled class file
 *.class
