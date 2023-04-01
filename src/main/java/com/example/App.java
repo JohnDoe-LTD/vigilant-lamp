@@ -8,15 +8,13 @@ package com.example;
  */
 public final class App {
 
-    private App() {
-    }
-
-    /**
-     * Application entry point.
-     *
-     * @param args Arguments array received from CLI call.
-     */
-    public static void main(final String[] args) {
-        System.out.println("hello World!");
-    }
+  /**
+   * Application entry point.
+   *
+   * @param args Arguments array received from CLI call.
+   */
+  public static void main(final String[] args)
+  {
+    System.out.println("hello World!");
+  }
 }
