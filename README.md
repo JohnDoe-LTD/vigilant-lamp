@@ -13,7 +13,7 @@ Java training template
 - [x] Code coverage
   - [x] Report coverage on GitHub 
 - [x] CheckStyle
-  - [ ] Report results on GitHub
+  - [x] Report results on GitHub
   - [ ] Set style rules:
     - [ ] [Google Checks](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
     - [ ] [Sun Checks](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/sun_checks.xml)

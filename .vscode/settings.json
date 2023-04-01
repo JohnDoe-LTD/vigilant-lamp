@@ -1,5 +1,5 @@
 {
-    "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
+    "java.checkstyle.configuration": "/google_checks.xml",
     "koverage.lowCoverageThreshold": 98,
     "koverage.sufficientCoverageThreshold": 100,
     "koverage.coverageFileNames": [
