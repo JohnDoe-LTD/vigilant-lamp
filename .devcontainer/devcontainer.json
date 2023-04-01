@@ -24,8 +24,12 @@
 				"donjayamanne.githistory",
 				"sohibe.java-generate-setters-getters",
 				"jebbs.plantuml",
-				"SonarSource.sonarlint-vscode"
-			]
+				"SonarSource.sonarlint-vscode",
+				"redhat.vscode-xml"
+			],
+			"settings": {
+				"java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml"
+			}
 		}
 	}
 
