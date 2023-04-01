@@ -6,7 +6,7 @@ package com.example;
  * @author John Doe
  * @version 1.0.0
  */
-public final class App {
+public final class App{
 
     private App() {
     }
