@@ -44,8 +44,10 @@ jobs:
         fail_on_failure: true
         require_tests: true
         include_passed: true
+        job_summary: false
         detailed_summary: false
         annotate_notice: false
+        check_retries: true        
     
     - name: Code Coverage Report
       id: jacoco_reporter
