@@ -47,10 +47,12 @@ jobs:
       if: always()
       with:
         report_paths: '**/surefire-reports/TEST-*.xml'
+        check_name: 'Unit Test Report'
         fail_on_failure: true
         require_tests: true
         include_passed: true
         detailed_summary: true
+        annotate_notice: true
         
     - name: JaCoCo Code Coverage Report
       id: jacoco_reporter
