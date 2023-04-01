@@ -63,3 +63,11 @@ jobs:
         fail_below_threshold: true
         publish_only_summary: false
     
+    - name: Run check style
+      uses: nikitasavinov/checkstyle-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: 'github-pr-check'
+        fail_on_error: true
+        level: info
+        checkstyle_config: 'sun_checks.xml'
