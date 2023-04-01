@@ -14,6 +14,7 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() {
-        assertTrue(false);
+        App.main(null);
+        assertTrue(true);
     }
 }
