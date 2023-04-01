@@ -38,7 +38,11 @@ jobs:
     - name: Run the Maven verify phase
       run: mvn --batch-mode --update-snapshots verify
     
-    - name: 2 Unit Test Report
+    - name: Run code covereage report
+      if: always()
+      run: mvn jacoco:report
+
+    - name: Unit Test Report
       uses: mikepenz/action-junit-report@v3
       if: always()
       with:
@@ -50,11 +54,7 @@ jobs:
         detailed_summary: true
         annotate_notice: true
     
-    - name: Run code covereage report
-      if: always()
-      run: mvn jacoco:report
-
-    - name: 3 Code Coverage Report
+    - name: Code Coverage Report
       id: jacoco_reporter
       if: always()
       uses: PavanMudigonda/jacoco-reporter@v4.8
@@ -66,4 +66,8 @@ jobs:
         skip_check_run: false
         minimum_coverage: 100
         fail_below_threshold: true
-        publish_only_summary: true
+        publish_only_summary: false
+    
+    # Publish Coverage Job Summary  # Optional
+    - name: Add Coverage Job Summary
+      run: echo "${{ steps.jacoco_reporter.outputs.coverageSummary }}" >> $GITHUB_STEP_SUMMARY
