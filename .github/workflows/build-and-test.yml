@@ -16,11 +16,11 @@ on:
     branches: 
       - '**'
 
-permissions:
-  checks: write
-
 jobs:
   build:
+    permissions:
+      checks: write
+
     name: Build and test
     runs-on: ubuntu-latest
     steps:
@@ -47,6 +47,7 @@ jobs:
       if: always()
       with:
         report_paths: '**/surefire-reports/TEST-*.xml'
+        token: ${{ secrets.GITHUB_TOKEN }}
         check_name: 'Unit Test Report'
         fail_on_failure: true
         require_tests: true
@@ -66,8 +67,5 @@ jobs:
         skip_check_run: false
         minimum_coverage: 100
         fail_below_threshold: true
-        publish_only_summary: false
+        publish_only_summary: false   
     
-    - name: Add Coverage Job Summary
-      if: always()
-      run: echo "${{ steps.jacoco_reporter.outputs.coverageSummary }}" >> $GITHUB_STEP_SUMMARY
