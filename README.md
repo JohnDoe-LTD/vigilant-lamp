@@ -60,6 +60,7 @@ how to build as debug?
 
 - https://github.com/marketplace/actions/junit-report-action
 - https://github.com/marketplace/actions/jacoco-reporter
+- https://github.com/marketplace/actions/run-java-checkstyle
 
 ## Tests
 

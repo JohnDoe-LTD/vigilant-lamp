@@ -13,8 +13,7 @@ public final class App {
    *
    * @param args Arguments array received from CLI call.
    */
-  public static void main(final String[] args)
-  {
+  public static void main(final String[] args) {
     System.out.println("hello World!");
   }
 }

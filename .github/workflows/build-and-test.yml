@@ -38,7 +38,6 @@ jobs:
         reporter: 'github-pr-check'
         fail_on_error: true
         level: info
-        checkstyle_config: 'sun_checks.xml'
         workdir: 'src/main/'
 
     - name: Run the JaCoCo report
