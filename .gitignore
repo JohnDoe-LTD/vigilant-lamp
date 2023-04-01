@@ -1,7 +1,6 @@
 # custom
 target/
 site/
-.vscode/
 
 # Compiled class file
 *.class
