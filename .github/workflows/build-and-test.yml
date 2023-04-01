@@ -46,13 +46,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         skip_check_run: false
         minimum_coverage: 100
-        fail_below_threshold: false
-        publish_only_summary: false
-      
-    # uploads the coverage-report.md artifact  # Optional
-    - name: Upload Code Coverage Artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: code-coverage-report-markdown
-        path: '*/coverage-results.md'
-        retention-days: 1
+        fail_below_threshold: true
+        publish_only_summary: true
