@@ -39,4 +39,4 @@ jobs:
       if: success() || failure()
       with:
         name: test-results
-        path: '**/target/sufire-reports/TEST-**.xml'
+        path: '**/surefire-reports/TEST-*.xml'
