@@ -36,9 +36,10 @@ jobs:
       uses: scacap/action-surefire-report@v1
     - name: JaCoCo Code Coverage Report
       id: jacoco_reporter
+      if: success() || failure()
       uses: PavanMudigonda/jacoco-reporter@v4.8
       with:
-        coverage_results_path: jacoco-report/test.xml
+        coverage_results_path: jacoco-report/jacoco.xml
         coverage_report_name: Coverage
         coverage_report_title: JaCoCo
         github_token: ${{ secrets.GITHUB_TOKEN }}
