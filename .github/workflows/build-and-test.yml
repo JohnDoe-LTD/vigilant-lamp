@@ -31,7 +31,8 @@ jobs:
       run: mvn --batch-mode --update-snapshots verify
     
     - name: Run check style
-      uses: nikitasavinov/checkstyle-action@master
+      if: always()
+      uses: nikitasavinov/checkstyle-action@master      
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
