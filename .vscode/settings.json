@@ -1,0 +1,13 @@
+{
+    "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
+    "koverage.lowCoverageThreshold": 98,
+    "koverage.sufficientCoverageThreshold": 100,
+    "koverage.coverageFileNames": [
+        "jacoco.xml"
+    ],
+    "koverage.coverageFilePaths": [
+        "**"
+    ],
+    "coverage-gutters.showGutterCoverage": true,
+    "coverage-gutters.showLineCoverage": true,    
+}
