@@ -27,3 +27,7 @@ jobs:
         cache: maven
     - name: Run the Maven verify phase
       run: mvn --batch-mode --update-snapshots verify
+    - name: JUnit Report
+      uses: mikepenz/action-junit-report@v2
+      with:
+        report_paths: '**/build/test-results/test/TEST-*.xml'
