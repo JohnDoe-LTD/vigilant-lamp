@@ -25,7 +25,8 @@
 				"sohibe.java-generate-setters-getters",
 				"jebbs.plantuml",
 				"SonarSource.sonarlint-vscode",
-				"redhat.vscode-xml"
+				"redhat.vscode-xml",
+				"redhat.vscode-yaml"
 			],
 			"settings": {
 				"java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml"
