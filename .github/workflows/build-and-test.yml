@@ -37,8 +37,12 @@ jobs:
     
     - name: Run the Maven verify phase
       run: mvn --batch-mode --update-snapshots verify
+
+    - name: Run code covereage report
+      if: always()
+      run: mvn jacoco:report
     
-    - name: Publish Test Report
+    - name: Unit Test Report
       uses: mikepenz/action-junit-report@v3
       if: always()
       with:
@@ -50,7 +54,7 @@ jobs:
         detailed_summary: true
         annotate_notice: true
         
-    - name: JaCoCo Code Coverage Report
+    - name: Code Coverage Report
       id: jacoco_reporter
       if: always()
       uses: PavanMudigonda/jacoco-reporter@v4.8
