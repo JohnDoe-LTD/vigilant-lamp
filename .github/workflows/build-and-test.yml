@@ -44,7 +44,7 @@ jobs:
         fail_on_failure: true
         require_tests: true
         include_passed: true
-        job_summary: false
+        job_summary: true
         detailed_summary: true
         annotate_notice: false
         check_retries: true        
