@@ -71,3 +71,4 @@ jobs:
         fail_on_error: true
         level: info
         checkstyle_config: 'sun_checks.xml'
+        workdir: 'src/main/'

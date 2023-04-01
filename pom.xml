@@ -73,7 +73,7 @@
             <goals>
               <goal>report</goal>
             </goals>
-            <configuration>              
+            <configuration>
               <skip>${jacoco.skip}</skip>
             </configuration>
           </execution>
