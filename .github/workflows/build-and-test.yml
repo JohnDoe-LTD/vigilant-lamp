@@ -34,12 +34,4 @@ jobs:
     - name: Publish Test Report
       if: success() || failure()
       uses: scacap/action-surefire-report@v1
-    - name: Publish checkstyle Report
-      if: success() || failure()
-      run: mvn checkstyle:checkstyle
-    - name: Publish test results
-      uses: actions/upload-artifact@v2
-      if: success() || failure()
-      with:
-        name: test-results
-        path: '**/surefire-reports/TEST-*.xml'
+       
