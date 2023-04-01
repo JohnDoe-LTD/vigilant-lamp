@@ -30,6 +30,16 @@ jobs:
     - name: Run the Maven verify phase
       run: mvn --batch-mode --update-snapshots verify
     
+    - name: Run check style
+      uses: nikitasavinov/checkstyle-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: 'github-pr-check'
+        fail_on_error: true
+        level: info
+        checkstyle_config: 'sun_checks.xml'
+        # workdir: 'src/main/'
+
     - name: Run the JaCoCo report
       if: always()
       run: mvn --batch-mode --update-snapshots jacoco:report
@@ -62,13 +72,3 @@ jobs:
         minimum_coverage: 100
         fail_below_threshold: true
         publish_only_summary: false
-    
-    - name: Run check style
-      uses: nikitasavinov/checkstyle-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        reporter: 'github-pr-check'
-        fail_on_error: true
-        level: info
-        checkstyle_config: 'sun_checks.xml'
-        workdir: 'src/main/'
