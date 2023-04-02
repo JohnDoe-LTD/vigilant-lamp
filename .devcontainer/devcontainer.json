@@ -23,9 +23,10 @@
 				"donjayamanne.githistory",
 				"sohibe.java-generate-setters-getters",
 				"redhat.vscode-xml",
-				"redhat.vscode-yaml",				
+				"redhat.vscode-yaml",
 				"tenninebt.vscode-koverage",
-				"ryanluker.vscode-coverage-gutters"
+				"ryanluker.vscode-coverage-gutters",
+				"SonarSource.sonarlint-vscode"
 			]
 		}
 	}
