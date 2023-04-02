@@ -1,0 +1,12 @@
+{
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.checkstyle.configuration": "/google_checks.xml",
+    "koverage.lowCoverageThreshold": 60,
+    "koverage.sufficientCoverageThreshold": 80,
+    "koverage.coverageFileNames": [
+        "jacoco.xml"
+    ],
+    "coverage-gutters.showGutterCoverage": true,
+    "coverage-gutters.showLineCoverage": true,
+    "editor.tabSize": 2
+}
