@@ -2,38 +2,31 @@
 
 Java training template
 
+## Goals
+
+[TBD]
+
 ## Getting started
 
 [TBD]
 
-## Tools
+## Features
 
-- [x] Unit test
-  - [x] Report testing on GitHub
+- [x] Unit test  
 - [x] Code coverage
-  - [x] Report coverage on GitHub 
-- [x] CheckStyle
-  - [x] Report results on GitHub
-  - [ ] Set style rules:
-    - [ ] [Google Checks](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
-    - [ ] [Sun Checks](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/sun_checks.xml)
-- [ ] Linter
+- [x] CheckStyle [google](https://google.github.io/styleguide/javaguide.html)
+- [ ] SonarLint (comming soon)
+
+## Roadmap
 
 - [ ] JavaDocs
-- [ ] Plantuml
-- [ ] Mermaid
-- [ ] Markdown
-- [ ] LiveServer extension?
-
-- [ ] Docs folder
-- [ ] Create VSCode extension which allows creating project
-- [ ] Create template with multpiproject => activities
-
-- [ ] Code metrics
-    - [ ] Use SonarQube Community Container
-- [ ] User server (local) to render reports
-
-how to build as debug?
+- [ ] Support UML diagrams
+  - [ ] Plantuml
+  - [ ] Integrate mermaid with Markdown
+- [ ] Markdown linters
+- [ ] Code metrics with local SonarQube Container
+- [ ] Use of SQL DB Container
+- [ ] Use of local server and publish reports
 
 ## Prerequisites
 
@@ -45,10 +38,8 @@ how to build as debug?
 - `mvn clean`: Cleans the project and removes all compile files.
 - `mvn compile`: Compiles source code of the project.
 - `mvn test`: Runs tests for the project.
-- `mvn package`: Creates JAR or WAR file for the project.
 - `mvn verify`: [TBD]
 - `mvn checkstyle:check`: Run checkstyle plugin.
-- `mvn checkstyle:checkstyle`: Run checkstyle and create the report (site).
 - `mvn jacoco:report`: Create the report from the result of mvn test
 
 ## Build With
@@ -80,8 +71,9 @@ Testing:
 - https://snyk.io/blog/writing-unit-tests-in-java/
 - ttps://www.digitalocean.com/community/tutorials/junit-setup-maven
 
-CheckStyle:
+Linting:
 
+- https://code.visualstudio.com/docs/java/java-linting
 - https://checkstyle.org/
 
 Code coverage:
@@ -99,7 +91,11 @@ Code coverage:
 
 ### VSCode extensions
 
+- https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode
+- https://marketplace.visualstudio.com/items?itemName=shengchen.vscode-checkstyle
+
 - https://marketplace.visualstudio.com/items?itemName=tenninebt.vscode-koverage
+- https://marketplace.visualstudio.com/items?itemName=ryanluker.vscode-coverage-gutters
 
 ## License
 
