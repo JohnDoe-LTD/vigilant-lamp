@@ -22,11 +22,8 @@
 				"mhutchie.git-graph",
 				"donjayamanne.githistory",
 				"sohibe.java-generate-setters-getters",
-				"jebbs.plantuml",
-				"SonarSource.sonarlint-vscode",
 				"redhat.vscode-xml",
-				"redhat.vscode-yaml",
-				"ritwickdey.LiveServer",
+				"redhat.vscode-yaml",				
 				"tenninebt.vscode-koverage",
 				"ryanluker.vscode-coverage-gutters"
 			]

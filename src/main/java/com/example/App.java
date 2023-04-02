@@ -6,14 +6,18 @@ package com.example;
  * @author John Doe
  * @version 1.0.0
  */
-public final class App {
+public final class App
+{
+
+  private App() {
+  }
 
   /**
    * Application entry point.
    *
    * @param args Arguments array received from CLI call.
    */
-  public static void main(final String[] args) {
+  public static void main(final String[] args){
     System.out.println("hello World!");
   }
 }

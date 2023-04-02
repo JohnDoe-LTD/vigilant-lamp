@@ -1,13 +1,11 @@
 {
     "java.checkstyle.configuration": "/google_checks.xml",
-    "koverage.lowCoverageThreshold": 98,
-    "koverage.sufficientCoverageThreshold": 100,
+    "koverage.lowCoverageThreshold": 60,
+    "koverage.sufficientCoverageThreshold": 80,
     "koverage.coverageFileNames": [
         "jacoco.xml"
     ],
-    "koverage.coverageFilePaths": [
-        "**"
-    ],
     "coverage-gutters.showGutterCoverage": true,
-    "coverage-gutters.showLineCoverage": true,    
+    "coverage-gutters.showLineCoverage": true,
+    "editor.tabSize": 2
 }

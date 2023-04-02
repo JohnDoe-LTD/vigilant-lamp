@@ -9,12 +9,12 @@ import org.junit.jupiter.api.Test;
  */
 public class AppTest {
 
-    /**
-     * This is a test.
-     */
-    @Test
-    public void shouldAnswerWithTrue() {
-        App.main(null);
-        assertTrue(true);
-    }
+  /**
+   * This is a test.
+   */
+  @Test
+  public void shouldAnswerWithTrue() {
+    App.main(null);
+    assertTrue(true);
+  }
 }
