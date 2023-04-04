@@ -1,6 +1,6 @@
 # custom
 target/
-site/
+.data/
 
 # Compiled class file
 *.class

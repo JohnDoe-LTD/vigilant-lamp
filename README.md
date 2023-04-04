@@ -1,6 +1,6 @@
-# Java Training Template
+# Java Training Kit
 
-Java training template
+Java Training Kit
 
 ## Goals
 
@@ -15,7 +15,9 @@ Java training template
 - [x] Unit test  
 - [x] Code coverage
 - [x] CheckStyle [google](https://google.github.io/styleguide/javaguide.html)
-- [ ] SonarLint (comming soon)
+- [x] SonarLint (comming soon)
+  - [ ] admin:admin sqp_27f461afef7251cd89cdaba4b40e4702377156b6
+  - [ ] create runbook
 
 ## Roadmap
 
@@ -24,9 +26,9 @@ Java training template
   - [ ] Plantuml
   - [ ] Integrate mermaid with Markdown
 - [ ] Markdown linters
-- [ ] Code metrics with local SonarQube Container
-- [ ] Use of SQL DB Container
-- [ ] Use of local server and publish reports
+- [x] Code metrics with local SonarQube Container
+- [x] Use of SQL DB Container
+- [x] Use of local server and publish reports
 
 ## Prerequisites
 
@@ -41,6 +43,13 @@ Java training template
 - `mvn verify`: [TBD]
 - `mvn checkstyle:check`: Run checkstyle plugin.
 - `mvn jacoco:report`: Create the report from the result of mvn test
+
+```shell
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey={PROJECT_KEY} \
+  -Dsonar.host.url=http://sonarqube:9000 \
+  -Dsonar.login=sqp_27f461afef7251cd89cdaba4b40e4702377156b6
+```
 
 ## Build With
 
@@ -82,6 +91,10 @@ Code coverage:
 - https://www.baeldung.com/jacoco
 - https://www.baeldung.com/cs/code-coverage
 - https://roytuts.com/junit-code-coverage/
+
+SonarQube
+
+- https://blog.logrocket.com/inspect-code-docker-sonarqube/
 
 ### Plugins
 

@@ -8,5 +8,25 @@
     ],
     "coverage-gutters.showGutterCoverage": true,
     "coverage-gutters.showLineCoverage": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "db",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "local",
+            "username": "root",
+            "password": "my-secret-pw",
+            "database": "sys"
+        }
+    ],
+    "sonarlint.connectedMode.project": {
+        "connectionId": "local",
+        "projectKey": "test"
+    },
+    
 }

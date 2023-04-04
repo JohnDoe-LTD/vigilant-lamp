@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: app
+    image: mcr.microsoft.com/devcontainers/java:0-11
+    volumes:
+      - ../..:/workspaces:cached      
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    network_mode: service:db 
+
+  db:
+    container_name: db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - .data:/var/lib/mysql
+      - ../scripts:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+    ports:
+      - 3306:3306
+
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube:community
+    ports:
+      - 9000:9000
