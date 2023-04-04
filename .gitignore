@@ -1,6 +1,7 @@
 # custom
 target/
-.data/
+.mysql/
+.sonar/
 
 # Compiled class file
 *.class

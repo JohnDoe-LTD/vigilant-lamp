@@ -1,4 +1,4 @@
-# Java Training Kit
+# Java training kit
 
 Java Training Kit
 
@@ -14,53 +14,57 @@ Java Training Kit
 
 - [x] Unit test  
 - [x] Code coverage
-- [x] CheckStyle [google](https://google.github.io/styleguide/javaguide.html)
-- [x] SonarLint (comming soon)
-  - [ ] admin:admin sqp_27f461afef7251cd89cdaba4b40e4702377156b6
-  - [ ] create runbook
+- [x] [CheckStyle][checkstyle]
+- [x] [SonarQube][sonar]
 
 ## Roadmap
 
+- [x] Code metrics with local SonarQube Container
+- [x] Use of SQL DB Container
+- [x] Use of local server and publish reports
 - [ ] JavaDocs
 - [ ] Support UML diagrams
   - [ ] Plantuml
   - [ ] Integrate mermaid with Markdown
 - [ ] Markdown linters
-- [x] Code metrics with local SonarQube Container
-- [x] Use of SQL DB Container
-- [x] Use of local server and publish reports
 
 ## Prerequisites
 
-- [Docker](https://www.docker.com/)
-- [DevContaner](https://code.visualstudio.com/docs/devcontainers/containers)
+- [Docker][docker]
+- [DevContaner][dev-contaner]
 
-## Commands
+## How to run
+
+Execute `./run.sh` to verify and analyze the project with all features.
+
+## Maven commands
 
 - `mvn clean`: Cleans the project and removes all compile files.
 - `mvn compile`: Compiles source code of the project.
 - `mvn test`: Runs tests for the project.
 - `mvn verify`: [TBD]
-- `mvn checkstyle:check`: Run checkstyle plugin.
-- `mvn jacoco:report`: Create the report from the result of mvn test
+- `mvn checkstyle:check`: Run checkstyle.
+- `mvn jacoco:report`: Create the report from the result of test.
 
 ```shell
 mvn clean verify sonar:sonar \
-  -Dsonar.projectKey={PROJECT_KEY} \
+  -Dsonar.projectKey=$PROJECT_KEY \
+  -Dsonar.projectName=$PROJET_NAME \
   -Dsonar.host.url=http://sonarqube:9000 \
-  -Dsonar.login=sqp_27f461afef7251cd89cdaba4b40e4702377156b6
+  -Dsonar.token=$PROJECT_TOKEN
 ```
 
 ## Build With
 
-- [Java 11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
-- [JUnit 5](https://junit.org/junit5/)
+- [Java 11][java]
+- [JUnit 5][jUnit]
 
 ## GitHub Actions
 
-- https://github.com/marketplace/actions/junit-report-action
-- https://github.com/marketplace/actions/jacoco-reporter
-- https://github.com/marketplace/actions/run-java-checkstyle
+- [Surefire report][surefire-report]
+- [JUnit report][junit-report-action]
+- [JaCoCo][jacoco-report-action]
+- [Checkstyle][checkstyle-report-action]
 
 ## Tests
 
@@ -72,6 +76,7 @@ mvn clean verify sonar:sonar \
 - https://maven.apache.org/surefire/maven-surefire-report-plugin/
 
 Testing:
+
 - https://www.baeldung.com/java-unit-testing-best-practices
 - Naming convention:
   - https://dzone.com/articles/7-popular-unit-test-naming
@@ -96,7 +101,7 @@ SonarQube
 
 - https://blog.logrocket.com/inspect-code-docker-sonarqube/
 
-### Plugins
+### Maven plugins
 
 - https://maven.apache.org/plugins/maven-compiler-plugin/
 - https://maven.apache.org/plugins/maven-checkstyle-plugin/
@@ -126,3 +131,15 @@ FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[sonar-host]: http://localhost:9000
+[google-style-guide]: https://google.github.io/styleguide/javaguide.html
+
+[docker]: https://www.docker.com/
+[dev-contaner]: https://code.visualstudio.com/docs/devcontainers/containers
+[java]: https://docs.oracle.com/en/java/javase/11/docs/api/index.html
+[jUnit]: https://junit.org/junit5/
+[junit-report-action]: https://github.com/marketplace/actions/junit-report-action
+[jacoco-report-action]: https://github.com/marketplace/actions/jacoco-reporter
+[checkstyle-report-action]: https://github.com/marketplace/actions/run-java-checkstyle
+[surefire-report]: https://github.com/marketplace/actions/surefire-report
