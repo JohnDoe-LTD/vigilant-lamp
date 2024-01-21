@@ -26,8 +26,7 @@
 
 ## Template features
 
-- [x] Unit test  
-- [x] Code coverage
+- [x] Unit test
 - [x] [CheckStyle][google-styles]
 - [x] JavaDoc
 - [x] SonarLint
@@ -39,7 +38,7 @@
 
 ## Roadmap
 
-- [ ] pre-commit
+- [x] pre-commit
 - [ ] Markdown linters
 - [ ] Use of SQL DB Container
 - [x] JavaDocs

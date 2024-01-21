@@ -1,41 +1,40 @@
 {
-	"name": "Java",
-	"image": "mcr.microsoft.com/devcontainers/java:17",
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "true",
-			"installGradle": "false"
-		},
-		"ghcr.io/devcontainers/features/node:1": {
-			"nodeGypDependencies": true,
-			"version": "20"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"java.configuration.updateBuildConfiguration": "interactive",
-				"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-				"java.checkstyle.configuration": "/google_checks.xml",
-				"koverage.lowCoverageThreshold": 60,
-				"koverage.sufficientCoverageThreshold": 80,
-				"koverage.coverageFileNames": ["jacoco.xml"],
-				"coverage-gutters.showGutterCoverage": true,
-				"coverage-gutters.showLineCoverage": true,
-				"editor.tabSize": 2
-		},
-			"extensions": [
-				"shengchen.vscode-checkstyle",
-				"mhutchie.git-graph",
-				"donjayamanne.githistory",
-				"sohibe.java-generate-setters-getters",
-				"redhat.vscode-xml",
-				"redhat.vscode-yaml",
-				"tenninebt.vscode-koverage",
-				"ryanluker.vscode-coverage-gutters",
-				"SonarSource.sonarlint-vscode"
-			]
-		}
-	}
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "shengchen.vscode-checkstyle",
+        "sohibe.java-generate-setters-getters",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "SonarSource.sonarlint-vscode"
+      ],
+      "settings": {
+        "coverage-gutters.showGutterCoverage": true,
+        "coverage-gutters.showLineCoverage": true,
+        "editor.tabSize": 2,
+        "java.checkstyle.configuration": "/google_checks.xml",
+        "java.configuration.updateBuildConfiguration": "interactive",
+        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+        "koverage.coverageFileNames": [
+          "jacoco.xml"
+        ],
+        "koverage.lowCoverageThreshold": 60,
+        "koverage.sufficientCoverageThreshold": 80
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "installGradle": "false",
+      "installMaven": "true",
+      "version": "none"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "version": "20"
+    }
+  },
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "name": "Java"
 }
