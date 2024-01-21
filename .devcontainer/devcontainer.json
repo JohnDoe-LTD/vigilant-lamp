@@ -9,17 +9,10 @@
         "SonarSource.sonarlint-vscode"
       ],
       "settings": {
-        "coverage-gutters.showGutterCoverage": true,
-        "coverage-gutters.showLineCoverage": true,
         "editor.tabSize": 2,
         "java.checkstyle.configuration": "/google_checks.xml",
         "java.configuration.updateBuildConfiguration": "interactive",
-        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-        "koverage.coverageFileNames": [
-          "jacoco.xml"
-        ],
-        "koverage.lowCoverageThreshold": 60,
-        "koverage.sufficientCoverageThreshold": 80
+        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml"
       }
     }
   },
