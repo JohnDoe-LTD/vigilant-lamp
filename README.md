@@ -10,7 +10,9 @@
 
 ## Getting started
 
-[TBD]
+```
+pre-commit install
+```
 
 ## Dependencies
 
@@ -46,7 +48,8 @@
 
 ## Commands
 
-- `mvn clean`: Cleans the project and removes all compile files.
+- `pre-commit run --all-files`: Run pre-commit rules
+- `mvn clean`: Clean the project and removes all compile files.
 - `mvn compile`: Compiles source code of the project.
 - `mvn test`: Runs tests for the project.
 - `mvn checkstyle:checkstyle`: Run checkstyle and generate the report.
